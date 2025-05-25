@@ -3,7 +3,6 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('test suite here', () => {
 
-
     test('[@smoke] Login to Secure Area with valid credentials', async ({ page }) => {
 
         // 1. Navigate to the homepage
@@ -15,6 +14,7 @@ test.describe('test suite here', () => {
         // 3. Fill in login form
         await page.getByLabel('Username').fill('tomsmith');
         await page.getByLabel('Password').fill('SuperSecretPassword!');
+        await page.screenshot({ path: "screenshot.png", fullPage: true });
 
         // 4. Click the Login button
         await page.getByRole('button', { name: 'Login' }).click();
@@ -22,7 +22,5 @@ test.describe('test suite here', () => {
         // 5. Assertion - verify secure area message
         await expect(page.locator('text=Welcome to the Secure Area')).toBeVisible();
     });
-
-
 });
 
