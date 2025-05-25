@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testChrome" :"npx playwright test --config=playwright.config.js --project=chrome",
+    "testFirefox" :"npx playwright test --config=playwright.config.js --project=firefox",
+    "testWebkit" :"npx playwright test --config=playwright.config.js --project=webkit"
   },
   "keywords": [],
   "author": "",

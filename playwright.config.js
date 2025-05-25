@@ -7,7 +7,8 @@ const config = {
         headless: false,
         viewport: { width: 1280, height: 720 },
         video: "off",
-        screenshot: "only-on-failure"
+        screenshot: "only-on-failure",
+        baseURL: 'https://the-internet.herokuapp.com'
     },
 
     projects: [
